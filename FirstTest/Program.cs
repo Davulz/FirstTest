@@ -119,9 +119,9 @@ switch (cki.Key)
 Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg + "\nNøkkelkompetanser: " + You.NK);
 Console.ReadKey();
 Console.Clear();
-Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
+Console.WriteLine("  ~~~~~~~~~~~~~~~~~~~");
 Console.WriteLine("  Første Team Oppgave");
-Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
+Console.WriteLine("  ~~~~~~~~~~~~~~~~~~~");
 
 Console.WriteLine("Tiden går, og det er på tide med første teamoppgave.\nDere i teamet er trygge på hverandre og samarbeider godt.");
 Console.Write("Dere skal lage ett fungerende inventory der man kan legge til gjenstander.\nOla skriver denne funksjonen:\n");
@@ -189,10 +189,13 @@ else
 Console.ReadKey();
 Console.Clear();
 
+Console.WriteLine("  ~~~~~");
+Console.WriteLine("  M V C");
+Console.WriteLine("  ~~~~~");
 
 
 
-
+Console.WriteLine("Dere begynner å lære ")
 
 
 
