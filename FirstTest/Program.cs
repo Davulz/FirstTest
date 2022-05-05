@@ -3,7 +3,7 @@
     var You = new Charsheet(); 
     ConsoleKeyInfo cki;
     bool NOTpressed = true;
-public char[] kodeOrd = new char[11];
+//public char[] kodeOrd = new char[11];
 
 Console.WriteLine("Hei og velkommen til GET Academy!");
 Console.WriteLine();
@@ -100,7 +100,7 @@ switch (cki.Key)
             You.Kode++;
             You.Trygg++;
             You.NK++;
-            You.kodeOrd[0] = 'G';
+            //You.kodeOrd[0] = 'G';
             Console.WriteLine("Balansen er god, dere blir godt kjente med hverandre i gruppa, samtidig som dere gjør fremskritt i kodinga.");
             break;
         }
@@ -114,12 +114,90 @@ switch (cki.Key)
 
         }
 }
-for (int i = 0; i < You.kodeOrd.Length; i++)
-{
-    Console.Write(You.kodeOrd);
-}
+
 
 Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg + "\nNøkkelkompetanser: " + You.NK);
+Console.ReadKey();
+Console.Clear();
+Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
+Console.WriteLine("  Første Team Oppgave");
+Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
+
+Console.WriteLine("Tiden går, og det er på tide med første teamoppgave.\nDere i teamet er trygge på hverandre og samarbeider godt.");
+Console.Write("Dere skal lage ett fungerende inventory der man kan legge til gjenstander.\nOla skriver denne funksjonen:\n");
+Console.WriteLine();
+Console.WriteLine("function showOutput(){");
+Console.WriteLine(" var skjult = utputt.style.display;");
+Console.WriteLine(" if (skjult == 'none') {");
+Console.WriteLine("    utputt.style.display = 'grid';");
+Console.WriteLine("    knapp.innerHTML = 'Hide tha box!'"); 
+Console.WriteLine(" }");
+Console.WriteLine(" else {");
+Console.WriteLine("    utputt.style.display = 'none';");
+Console.WriteLine("    knapp.innerHTML = 'Whats in the Box?';");
+Console.WriteLine(" }");
+Console.WriteLine("}");
+Console.WriteLine();
+Console.WriteLine("Hva gjør den?");
+Console.WriteLine();
+Console.WriteLine("1. Den fjerner boksen for alltid ");
+Console.WriteLine("2. Den endrer css stylingen på et element for å enten vise det eller skjule det");
+Console.WriteLine("3. Den tar det som er inni en div og putter det utenfor");
+Console.WriteLine("4. Du satt og leste om Konami koden på wikipedia og fikk ikke med deg spørsmålet. 12,5!!");
+Console.WriteLine();
+
+if (You.Trygg == 2)
+{
+    Console.WriteLine("*Trygghet*");
+    Console.WriteLine("Før du rekker å svare forklarer den ellers så blyge Ola at den endrer css stylingen på et element for å enten vise det eller skjule det");
+    Console.WriteLine("Du lærer noe nytt! (Koding +1)");
+    You.Kode++;
+    Console.Write("Trykk 2 for å svare riktig:");
+}
+if(You.Kode == 3)
+{
+    Console.WriteLine("*Koding*");
+    Console.Write("Du har vært borti lignende kode før ,og ser umiddelbart at svaret er 2");
+}
+
+
+do
+{
+
+    cki = Console.ReadKey();
+    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
+
+}
+while (NOTpressed);
+
+Console.WriteLine();
+
+NOTpressed = true;
+
+if (cki.Key == ConsoleKey.D2)
+{
+    You.Kode++;
+    You.Trygg++;
+    Console.WriteLine("Du svarer riktig og får en selvtillitsboost! (Koding +1, Trygghet +1)");
+}
+else
+{
+    Console.WriteLine("Dette skjønner du lite av. Du sjekker heller om det har skjedd noe nytt på VG. (Koding -1)");
+    You.Kode--;
+}
+
+Console.ReadKey();
+Console.Clear();
+
+
+
+
+
+
+
+
+
+
 
 public class Charsheet
 {
