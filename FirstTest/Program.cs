@@ -2,8 +2,26 @@
 
     var You = new Charsheet(); 
     ConsoleKeyInfo cki;
-    bool NOTpressed = true;
+    
 //public char[] kodeOrd = new char[11];
+static System.ConsoleKeyInfo keypress()
+{
+    ConsoleKeyInfo cki;
+    bool NOTpressed = true;
+    do
+    {
+
+        cki = Console.ReadKey();
+        if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
+
+    }
+    while (NOTpressed);
+
+    Console.WriteLine();
+
+    NOTpressed = true;
+    return cki;
+}
 
 Console.WriteLine("Hei og velkommen til GET Academy!");
 Console.WriteLine();
@@ -28,18 +46,21 @@ Console.WriteLine("1. CoNsOlE.LoG(var)");
 Console.WriteLine("2. konsoll.log(var)");
 Console.WriteLine("3. console.log(var)");
 Console.WriteLine("4. consoleLog(var)");
-do
-{
+
+
+cki = keypress();
+//do
+//{
     
-    cki = Console.ReadKey();
-    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
+//    cki = Console.ReadKey();
+//    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
 
-}
-while (NOTpressed);
+//}
+//while (NOTpressed);
 
-Console.WriteLine();
+//Console.WriteLine();
 
-NOTpressed = true;
+//NOTpressed = true;
 
 if (cki.Key == ConsoleKey.D3)
 {
@@ -61,7 +82,7 @@ Console.ReadKey();
 Console.Clear();
 Console.WriteLine();
 Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
-Console.WriteLine("  MODUl1 er i gang.");
+Console.WriteLine("  MODUL1 er i gang.");
 Console.WriteLine("  ~~~~~~~~~~~~~~~~~");
 Console.WriteLine();
 Console.WriteLine();
@@ -73,18 +94,21 @@ Console.WriteLine("2. Du deltar aktivt i praten, men prøver å holde gruppa i s
 Console.WriteLine();
 Console.WriteLine("3. Kodinga skjønner du sikkert mer av senere, akkurat nå er det mer interessant å prate litt om alle kattene til Kari(+2 Tryggeht)");
 Console.WriteLine();
-do
-{
+Console.WriteLine("4. Nei, hekkan heller. Dette virker gresk. I'm OUT!!");
+//do
+//{
 
-    cki = Console.ReadKey();
-    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3) { NOTpressed = false; };
+//    cki = Console.ReadKey();
+//    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3) { NOTpressed = false; };
 
-}
-while (NOTpressed);
+//}
+//while (NOTpressed);
 
-Console.WriteLine();
+//Console.WriteLine();
 
-NOTpressed = true;
+//NOTpressed = true;
+
+cki = keypress();
 
 switch (cki.Key)
 {
@@ -113,6 +137,9 @@ switch (cki.Key)
             break;
 
         }
+    case ConsoleKey.D4:
+        Environment.Exit(0);
+        break;
 }
 
 
@@ -160,19 +187,19 @@ if(You.Kode == 3)
     Console.Write("Du har vært borti lignende kode før ,og ser umiddelbart at svaret er 2");
 }
 
+cki = keypress();
+//do
+//{
 
-do
-{
+//    cki = Console.ReadKey();
+//    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
 
-    cki = Console.ReadKey();
-    if (cki.Key == ConsoleKey.D1 || cki.Key == ConsoleKey.D2 || cki.Key == ConsoleKey.D3 || cki.Key == ConsoleKey.D4) { NOTpressed = false; };
+//}
+//while (NOTpressed);
 
-}
-while (NOTpressed);
+//Console.WriteLine();
 
-Console.WriteLine();
-
-NOTpressed = true;
+//NOTpressed = true;
 
 if (cki.Key == ConsoleKey.D2)
 {
@@ -195,10 +222,37 @@ Console.WriteLine("  ~~~~~");
 
 
 
-Console.WriteLine("Dere begynner å lære ")
+Console.WriteLine("Dere begynner å lære MVC");
+Console.WriteLine(" Men hva står det for: ");
+Console.WriteLine();
+Console.WriteLine("1. More Vrong Code");
+Console.WriteLine("2. More Viable Code");
+Console.WriteLine("3. Many Violent Coders");
+Console.WriteLine("4. Model View Controller");
+Console.WriteLine();
+Console.WriteLine();
+cki = keypress();
 
+switch (cki.Key)
+{
+    case ConsoleKey.D2:
+        Console.WriteLine("Du har kanskje prøvd, men nå må det fokus til for å redde skoleplassen.");
+        break;
 
+    case ConsoleKey.D4:
+        Console.WriteLine("Godt å se du følger med i timen, men vet du hvordan det brukes?");
+        break;
 
+    default:
+        Console.WriteLine("Her er det vel tydelig at du ikke har vært våken de siste 4 ukene... Kanskje du skulle kjørt opp til lastebil i stedet?");
+        Console.ReadKey();
+        Environment.Exit(0);
+        break;
+        
+
+}
+
+Console.WriteLine("dette");
 
 
 
@@ -210,3 +264,4 @@ public class Charsheet
     public int NK = 0;
     public string kodeOrdTrff = "GET Academy";
 }
+
