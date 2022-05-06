@@ -68,7 +68,7 @@ if (cki.Key == ConsoleKey.D3)
         "");
     You.Kode++;
     Console.WriteLine();
-    Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg + "\nNøkkelkompetanser: " + You.NK +"\n Gratulerer! du er videre til MODUL1!!");
+    Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg + "\nGratulerer! du er videre til MODUL1!!");
 }
 else {
     Console.WriteLine("Du knoter lenge, men finner ikke ut av feilen. Du sender inn det du har uten store forhåpninger.");
@@ -123,7 +123,6 @@ switch (cki.Key)
         {
             You.Kode++;
             You.Trygg++;
-            You.NK++;
             //You.kodeOrd[0] = 'G';
             Console.WriteLine("Balansen er god, dere blir godt kjente med hverandre i gruppa, samtidig som dere gjør fremskritt i kodinga.");
             break;
@@ -143,7 +142,7 @@ switch (cki.Key)
 }
 
 
-Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg + "\nNøkkelkompetanser: " + You.NK);
+Console.Write("Dine ferdigheter:\nKoding: " + You.Kode + "\nTrygghet: " + You.Trygg);
 Console.ReadKey();
 Console.Clear();
 Console.WriteLine("  ~~~~~~~~~~~~~~~~~~~");
@@ -252,7 +251,7 @@ switch (cki.Key)
 
 }
 
-Console.WriteLine("dette");
+
 
 
 
@@ -261,7 +260,5 @@ public class Charsheet
     public string Name = "";
     public int Kode = 0;
     public int Trygg = 0;
-    public int NK = 0;
-    public string kodeOrdTrff = "GET Academy";
 }
 
